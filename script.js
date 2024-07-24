@@ -36,7 +36,7 @@ document.addEventListener('mousemove', function(e) {
    let cursorY = 0;
 
    // Speed of the cursor following the mouse
-   const speed = .7; // Adjust the speed (0.1 for slow, 1 for instant)
+   const speed = .8; // Adjust the speed (0.1 for slow, 1 for instant)
 
    // Function to update the cursor position smoothly
    const animateCursor = () => {
