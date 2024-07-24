@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'txt';
+    src: url(txt.otf);
+
+}
+@font-face {
+    font-family: 'txt1';
+    src: url(txt1.ttf);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    cursor: none;
+    z-index: 10;
+    background-image:
+    repeating-linear-gradient(
+        to right, transparent 0 100px,
+        #8e8e8e22 100px 101px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 100px,
+        #67676722 100px 101px
+    );
+}
+
+body::before{
+    position: absolute;
+    width: min(1400px, 90vw);
+    top: 10%;
+    left: 50%;
+    height: 90%;
+    transform: translateX(-50%);
+    content: '';
+    background-image: url(bg.png);
+    background-size: 130vh;
+    background-repeat: no-repeat;
+    background-position: top center;
+    pointer-events: none;
+}
+.model{
+    position: absolute;
+    width: min( 40vw);
+    left: 48%;
+    transform: translateX(-50%);
+    bottom: 0%;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}
+.content h1{
+    position: absolute;
+    font-family: 'txt1';
+    font-size: 30vh;
+    line-height: 1em;
+    color: #25283B;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 5%;
+}
+.content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 1.5px #ffffff;
+    color: transparent;
+}
+.content .About{
+    position: absolute;
+    font-family: 'txt1';
+    text-align: right;
+    max-width: 25vh;
+    max-height: 40vh;
+    right: 5%;
+    padding: 10px;
+    border-radius: 1vh;
+    bottom: 30%;
+    border:3px solid rgb(0, 0, 0);
+}
+.content h2{
+    font-family: 'txt1';
+    font-size: 4vh;
+}
+.content p2{
+    font-family: 'txt1';
+    font-size: 2vh;
+}
+.content p1{
+    font-family: 'txt1';
+    font-size: 1.8vh;
+}
+@media screen and (max-width: 1023px) {
+    .content h1{
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+    }
+    .content .About{
+        color: #fff;
+        padding: 20px;
+        text-shadow: 0 10px 20px #000;
+        z-index: 2;
+        max-width: unset;
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .banner .content h1{
+        font-size: 5em;
+    }
+}
+main{
+    width: min(1200px, 90vw);
+    margin: auto;
+}
+.slider{
+    width: 100%;
+    margin-top: 30px;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #ffffff 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: 10vh;
+    position: relative;
+}
+.slider .list .item{
+    width: 12vh;
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+}
+.slider .list .item img{
+    width: 100%;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.custom-cursor {
+    position: absolute;
+    width: 5.5vh; /* Width of the cursor image */
+    height: 5.5vh; /* Height of the cursor image */
+    pointer-events: none; /* Prevent interaction with the cursor */
+    z-index: 1000; /* Ensure the cursor is above other elements */
+    display: none; /* Initially hide the custom cursor */
+    transition: transform 0.05s linear; /* Smooth following effect */
+}
