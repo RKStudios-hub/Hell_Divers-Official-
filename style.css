@@ -1,19 +1,17 @@
 @font-face {
     font-family: 'txt';
     src: url(txt.otf);
-
 }
 @font-face {
     font-family: 'txt1';
     src: url(txt1.ttf);
-
 }
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
     overflow: hidden;
     cursor: none;
     z-index: 10;
@@ -27,8 +25,7 @@ body{
         #67676722 100px 101px
     );
 }
-
-body::before{
+body::before {
     position: absolute;
     width: min(1400px, 90vw);
     top: 10%;
@@ -42,9 +39,9 @@ body::before{
     background-position: top center;
     pointer-events: none;
 }
-.model{
+.model {
     position: absolute;
-    width: min( 40vw);
+    width: min(40vw);
     left: 48%;
     transform: translateX(-50%);
     bottom: 0%;
@@ -53,7 +50,7 @@ body::before{
     background-position: top center;
     z-index: 1;
 }
-.content h1{
+.content h1 {
     position: absolute;
     font-family: 'txt1';
     font-size: 30vh;
@@ -63,7 +60,7 @@ body::before{
     margin-top: 25%;
     margin-left: 5%;
 }
-.content h1::after{
+.content h1::after {
     position: absolute;
     inset: 0 0 0 0;
     content: attr(data-content);
@@ -71,7 +68,7 @@ body::before{
     -webkit-text-stroke: 1.5px #ffffff;
     color: transparent;
 }
-.content .About{
+.content .About {
     position: absolute;
     font-family: 'txt1';
     text-align: right;
@@ -81,22 +78,22 @@ body::before{
     padding: 10px;
     border-radius: 1vh;
     bottom: 30%;
-    border:3px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
 }
-.content h2{
+.content h2 {
     font-family: 'txt1';
     font-size: 4vh;
 }
-.content p2{
+.content p2 {
     font-family: 'txt1';
     font-size: 2vh;
 }
-.content p1{
+.content p1 {
     font-family: 'txt1';
     font-size: 1.8vh;
 }
 @media screen and (max-width: 1023px) {
-   .content .About{
+    .content .About {
         position: absolute;
         font-family: 'txt1';
         text-align: right;
@@ -106,18 +103,19 @@ body::before{
         padding: 10px;
         border-radius: 1vh;
         bottom: 30%;
-        border:3px solid rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
     }
+}
 @media screen and (max-width: 767px) {
-    .banner .content h1{
+    .banner .content h1 {
         font-size: 5em;
     }
 }
-main{
+main {
     width: min(1200px, 90vw);
     margin: auto;
 }
-.slider{
+.slider {
     width: 100%;
     margin-top: 30px;
     height: var(--height);
@@ -129,43 +127,104 @@ main{
         transparent
     );
 }
-.slider .list{
+.slider .list {
     display: flex;
     width: 100%;
     min-width: 10vh;
     position: relative;
 }
-.slider .list .item{
+.slider .list .item {
     width: 12vh;
     position: absolute;
     left: 100%;
     animation: autoRun 10s linear infinite;
     transition: filter 0.5s;
-    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
+    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1)) !important;
 }
-.slider .list .item img{
+.slider .list .item img {
     width: 100%;
 }
-@keyframes autoRun{
-    from{
+@keyframes autoRun {
+    from {
         left: 100%;
-    }to{
+    }
+    to {
         left: calc(var(--width) * -1);
     }
 }
-.slider:hover .item{
-    animation-play-state: paused!important;
+.slider:hover .item {
+    animation-play-state: paused !important;
     filter: grayscale(1);
 }
-.slider .item:hover{
+.slider .item:hover {
     filter: grayscale(0);
 }
 .custom-cursor {
     position: absolute;
-    width: 5.5vh; /* Width of the cursor image */
-    height: 5.5vh; /* Height of the cursor image */
-    pointer-events: none; /* Prevent interaction with the cursor */
-    z-index: 1000; /* Ensure the cursor is above other elements */
-    display: none; /* Initially hide the custom cursor */
-    transition: transform 0.05s linear; /* Smooth following effect */
+    width: 5.5vh;
+    height: 5.5vh;
+    pointer-events: none;
+    z-index: 1000;
+    display: none;
+    transition: transform 0.05s linear;
+}
+.nav {
+    position: absolute;
+    font-family: 'txt1';
+    text-align: center;
+    width: 25vh;
+    height: 30vh;
+    padding: 5px;
+    border-radius: 1vh;
+    border: 4px solid rgb(0, 0, 0);
+    bottom: 50vh;
+    left: 10vh;
+    font-size: 3vh;
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+.nav .pt-5 {
+    display: block;
+    padding: 8vh;
+    text-decoration: none;
+}
+.nav .pt-5 a {
+    color: #25283B;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+li a {
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    transition: 500ms;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+li a span {
+    width: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(172, 106, 172, 0) 50%,
+        rgb(0, 0, 0) 50%,
+        rgb(0, 0, 0) 60%,
+        rgba(172, 106, 172, 0) 60%
+    );
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 800ms linear;
+}
+li a:hover span {
+    background-size: 100% 100%;
+}
+li a:hover {
+    font-size: 1.5rem;
+    color: rgb(123, 123, 123);
+    text-decoration: none;
 }
