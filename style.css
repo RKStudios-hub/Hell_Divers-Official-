@@ -88,24 +88,11 @@ body::before {
     font-family: 'txt1';
     font-size: 2vh;
 }
-.content p1 {
+.content h3 {
     font-family: 'txt1';
     font-size: 1.8vh;
 }
-@media screen and (max-width: 1023px) {
-    .content .About {
-        position: absolute;
-        font-family: 'txt1';
-        text-align: right;
-        max-width: 30vh;
-        max-height: 80vh;
-        right: 5%;
-        padding: 10px;
-        border-radius: 1vh;
-        bottom: 30%;
-        border: 2px solid rgb(0, 0, 0);
-    }
-}
+
 @media screen and (max-width: 767px) {
     .banner .content h1 {
         font-size: 5em;
@@ -202,23 +189,24 @@ li a {
     font-size: 1.2rem;
     color: black;
     text-decoration: none;
-    transition: 500ms;
+    transition: 200ms;
     cursor: pointer;
     z-index: 2;
     position: relative;
+
 }
 li a span {
     width: 100%;
     background-image: linear-gradient(
         to bottom,
         rgba(172, 106, 172, 0) 50%,
-        rgb(0, 0, 0) 50%,
-        rgb(0, 0, 0) 60%,
+        rgb(86, 86, 86) 50%,
+        rgb(86, 86, 86) 60%,
         rgba(172, 106, 172, 0) 60%
     );
     background-size: 0 100%;
     background-repeat: no-repeat;
-    transition: 800ms linear;
+    transition: 300ms linear;
 }
 li a:hover span {
     background-size: 100% 100%;
@@ -227,4 +215,91 @@ li a:hover {
     font-size: 1.5rem;
     color: rgb(123, 123, 123);
     text-decoration: none;
+}
+@media screen and (max-width: 1023px) {
+    .content .About {
+        position: absolute;
+        font-family: 'txt1';
+        text-align: right;
+        max-width: 30vh;
+        max-height: 80vh;
+        right: 5%;
+        padding: 10px;
+        border-radius: 1vh;
+        bottom: 30%;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    .model {
+        position: absolute;
+        top: 20%;
+        width: min(40vw);
+        left: 48%;
+        transform: translateX(-50%);
+        bottom: 0%;
+        background-size: auto 130%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        z-index: 1;
+    }
+    .nav {
+        position: absolute;
+        font-family: 'txt1';
+        text-align: center;
+        width: 40vh;
+        height: 30vh;
+        padding: 5px;
+        border-radius: 1vh;
+        border: 4px solid rgb(0, 0, 0);
+        left: 10vh;
+        top: 30%;
+        font-size: 3vh;
+        cursor: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+    }
+    .nav .pt-5 a {
+        color: #25283B;
+        text-decoration: none;
+        font-size: 3.5vh;
+    }
+    .content .About {
+        top: 30%;
+        position: absolute;
+        font-family: 'txt1';
+        text-align: right;
+        max-width: 25vh;
+        max-height: 50vh;
+        right: 5%;
+        padding: 10px;
+        border-radius: 1vh;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    .content h2 {
+        font-family: 'txt1';
+        font-size: 4vh;
+    }
+    .content p2 {
+        font-family: 'txt1';
+        font-size: 2vh;
+    }
+    .content h3 {
+        font-family: 'txt1';
+        font-size: 1.8vh;
+        line-height: 110%;
+    }
+    .custom-cursor {
+        position: absolute;
+        width:0vh;
+        height: 0vh;
+        pointer-events: none;
+        z-index: 1000;
+        display: none;
+        transition: transform 0.05s linear;
+    }
+    body{
+        overflow: visible;
+    }
+    
 }
