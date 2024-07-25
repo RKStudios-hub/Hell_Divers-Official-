@@ -96,23 +96,18 @@ body::before{
     font-size: 1.8vh;
 }
 @media screen and (max-width: 1023px) {
-    .content h1{
-        text-align: center;
-        width: 100%;
-        text-shadow: 0 10px 20px #000;
-        font-size: 7em;
+   .content .About{
+        position: absolute;
+        font-family: 'txt1';
+        text-align: right;
+        max-width: 30vh;
+        max-height: 80vh;
+        right: 5%;
+        padding: 10px;
+        border-radius: 1vh;
+        bottom: 30%;
+        border:3px solid rgb(0, 0, 0);
     }
-    .content .About{
-        color: #fff;
-        padding: 20px;
-        text-shadow: 0 10px 20px #000;
-        z-index: 2;
-        max-width: unset;
-        width: 100%;
-        text-align: center;
-        padding: 0 30px;
-    }
-}
 @media screen and (max-width: 767px) {
     .banner .content h1{
         font-size: 5em;
