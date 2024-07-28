@@ -123,3 +123,14 @@ h4{
   text-align: center;
   margin-top: 40%;
 }
+@media screen and (max-width: 1023px) {
+        .custom-cursor {
+        position: absolute;
+        width:0vh;
+        height: 0vh;
+        pointer-events: none;
+        z-index: 1000;
+        display: none;
+        transition: transform 0.05s linear;
+    }
+}
