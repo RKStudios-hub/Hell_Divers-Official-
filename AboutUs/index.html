@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hell_Divers [Official]</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://kit.fontawesome.com/de150a8e8d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music1.mp3" type="audio/mpeg">
+    </audio>
+    <header class="p-6 text-center "><div class="box">
+        <h1 class="text-4xl ">Hell_Divers Club</h1>
+        <p class="text-lg mt-2">In Brotherhood We Trust, Together We Conquer</p>
+    </div>
+    </header>
+
+    <main class="p-8">
+        <section id="introduction" class="my-12 slide-in">
+            <h2 class="text-3xl font-semibold mb-4">INTRODUCTION</h2>
+            <p class="text-lg">
+                Welcome to Hell_Divers Club, where gamers unite to explore new worlds, conquer challenges, and make lasting friendships. Whether you're a casual player or a competitive pro, you'll find a home here.
+            </p>
+        </section>
+
+        <section id="mission" class="my-12 slide-in">
+            <h2 class="text-3xl font-semibold mb-4">OUR GOAL</h2>
+            <p class="text-lg">
+                At Hell_Divers Club, our mission is to create an inclusive and vibrant community for gamers of all skill levels. We strive to provide a platform where members can share their passion for gaming, improve their skills, and engage in epic adventures together.
+            </p>
+        </section>
+
+        <section id="contact" class="my-12 slide-in">
+            <h2 class="text-3xl font-semibold mb-4">JOIN US</h2>
+            <p class="text-lg">
+                Ready to dive into the action? Join us today and become a part of the Hell_Divers Club community. Connect with us on our social media channels or send us an email to get started!
+            </p>
+            <div class="mt-6">
+                <a href="#" class="bg-red-600 px-4 py-2 rounded-full hover:bg-red-500 transition transform hover:-translate-y-1">Contact Us</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 p-6 text-center">
+        <p>Follow us on:</p>
+        <div class="flex justify-center space-x-9 mt-2">
+            <a href="https://facebook.com/helldiversclub" class="hover:underline transition transform hover:scale-110"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://twitter.com/helldiversclub" class="hover:underline transition transform hover:scale-110"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://instagram.com/helldiversclub" class="hover:underline transition transform hover:scale-110"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+        <h4>Made by <strong>RK Studios</strong> with <i class="fa-solid fa-heart"></i></h4>
+    </footer>
+    <script src="script.js"></script>
+
+    <script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
