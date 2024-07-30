@@ -310,7 +310,7 @@ li a:hover {
     }
     
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .content .About {
      display: none;
     }
@@ -326,7 +326,7 @@ li a:hover {
         font-size: 3.5vh;
     }
     body{
-        overflow: hidden;
+        overflow: visible;
     }
     .item{
         display: none;
@@ -349,4 +349,3 @@ li a:hover {
         border-radius:10px;
     }
 }
-
