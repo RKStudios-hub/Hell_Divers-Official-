@@ -92,12 +92,19 @@ body::before {
     font-family: 'txt1';
     font-size: 1.8vh;
 }
+.landscape{
+    display: none;
+}
 
 @media screen and (max-width: 767px) {
     .banner .content h1 {
         font-size: 5em;
     }
 }
+.landscape{
+    display: none;
+}
+
 main {
     width: min(1200px, 90vw);
     margin: auto;
@@ -270,7 +277,7 @@ li a:hover {
         font-family: 'txt1';
         text-align: right;
         max-width: 25vh;
-        max-height: 50vh;
+        max-height: auto;
         right: 5%;
         padding: 10px;
         border-radius: 1vh;
@@ -302,4 +309,43 @@ li a:hover {
         overflow: visible;
     }
     
+}
+@media (max-width: 500px) {
+    .content .About {
+     display: none;
+    }
+    .model {
+       display: none;
+    }
+    .nav {
+        display: none;
+    }
+    .nav .pt-5 a {
+        color: #25283B;
+        text-decoration: none;
+        font-size: 3.5vh;
+    }
+    body{
+        overflow: hidden;
+    }
+    .item{
+        display: none;
+    }
+    .content .block h1{
+        font-size: 13vh;
+        text-align: center;
+        margin-top: 120%;
+        margin-left: 0%;
+    }
+    .landscape{
+        display: inline;
+        font-size: 4vh;
+        border: 5px solid;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        border-radius:10px;
+    }
 }
