@@ -6,61 +6,37 @@
     <title>Hell_Divers [Official]</title>
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <script src="https://kit.fontawesome.com/de150a8e8d.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 <body>
-    
     <audio id="backgroundMusic" autoplay loop>
-        <source src="music2.mp3" type="audio/mpeg">
+        <source src="music1.mp3" type="audio/mpeg">
     </audio>
-    <div class="slider" style="
-            --width: 100px;
-            --height: 50px;
-            --quantity: 10;
-        ">
-            <div class="list">
-                <div class="item" style="--position: 1"><img src="slider1_1.png" alt=""></div>
-                <div class="item" style="--position: 2"><img src="slider1_2.png" alt=""></div>
-                <div class="item" style="--position: 3"><img src="slider1_3.png" alt=""></div>
-                <div class="item" style="--position: 4"><img src="slider1_4.png" alt=""></div>
-                <div class="item" style="--position: 5"><img src="slider1_5.png" alt=""></div>
-                <div class="item" style="--position: 6"><img src="slider1_6.png" alt=""></div>
-                <div class="item" style="--position: 7"><img src="slider1_7.png" alt=""></div>
-                <div class="item" style="--position: 8"><img src="slider1_8.png" alt=""></div>
-                <div class="item" style="--position: 9"><img src="slider1_9.png" alt=""></div>
-                <div class="item" style="--position: 10"><img src="slider1_10.png" alt=""></div>
-            </div>
-        </div>
-    <div class="content">
-        <div class="block">
-            <h1 data-content="Hell Divers">
-            Hell Divers
-        </h1>
-        <div class="About">
-            <h2>Hell Divers</h2>
-            <p2><b><strong>By- RK Studios</strong></b></p2>
-            <h3>
-                <br>Welcome to Hell Divers Club, where gamers unite to find teammates, make friends, and dive into thrilling adventures together. 
-            </h3>
-        </div>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="bg1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-        
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-    <nav class="nav"> 		
-        <ul class="pt-5">
-            <li><a href="AboutUs/index.html"><span>About Us</span></a></li>
-            <li><a href="#"><span>Members</span></a></li>
-            <li><a href="#"><span>Games</span></a></li>
-            <li><a href="Social_media/index.html"><span>Socials</span></a></li>
-        </ul>
-    </nav>
-<div class="landscape">Rotate Your Phone To Landscape !</div>
-    <img src="cursor.png" alt="Custom Cursor" class="custom-cursor" id="customCursor">
-<img src="model (1).png" class="model"/>
-<script src="script.js"></script>
- 
+    <div class="title"><h1><span>Join the Hell</span></h1> <h2>Divers Club !</h2></div>
+    <div class="container">
+        <div class="txt">
+            <p>Welcome to the Hell Divers Club! We're excited to have you join our community. To get started, please fill out the form below so we can get to know you better.
+
+                <br><br><strong>Note:</strong> It's not important to fill in too much personal information.
+                
+                <br><br>After you complete the form, you can download your membership card and start enjoying all the benefits of being a Hell Diver!</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd95TXqb2vg_vT9kz8krjSKgVyCOYSd313x7LL5HggEwftNKg/viewform?usp=sf_link" target="_blank" id="link"><strong>Membership Form<br></strong></a>
+        <div id="countdown" style="display: none;">5 seconds remaining</div>
+        <a href="Member Card.png" download class="btn" id="downloadButton" style="display: none;"><h3>Download</h3></a>
+    </div>
+    <div class="landscape">Rotate Your Phone To Landscape !</div>
+    <script src="script.js"></script>
 </body>
-</html>    
+</html>

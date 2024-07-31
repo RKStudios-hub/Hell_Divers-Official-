@@ -1,3 +1,33 @@
+document.getElementById('link').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.open(this.href, '_blank');
+
+    const countdownElement = document.getElementById('countdown');
+    countdownElement.style.display = 'block';
+
+    let timeLeft = 5;
+    countdownElement.innerText = `${timeLeft} seconds remaining`;
+
+    const timer = setInterval(function() {
+        timeLeft--;
+        if (timeLeft > 0) {
+            countdownElement.innerText = `${timeLeft} seconds remaining`;
+        } else {
+            clearInterval(timer);
+            countdownElement.style.display = 'none';
+            document.getElementById('downloadButton').style.display = 'inline-block';
+            document.getElementById('downloadButton').classList.add('loading');
+        }
+    }, 1000);
+});
+
+window.addEventListener('scroll', function() {
+    const video = document.getElementById('background-video');
+    const scrollPosition = window.pageYOffset;
+    
+    video.style.transform = `translate3d(-50%, calc(-50% + ${scrollPosition * 0.5}px), 0)`;
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     var audio = document.getElementById('backgroundMusic');
     var playPromise = audio.play();
@@ -12,65 +42,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-let timeout;
-document.addEventListener('mousemove', function(e) {
-    if (timeout) {
-        cancelAnimationFrame(timeout);
-    }
-    timeout = requestAnimationFrame(function() {
-        const videoContainer = document.getElementById('videoContainer');
-        const x = (e.clientX - window.innerWidth / 2) / 20;
-        const y = (e.clientY - window.innerHeight / 2) / 20;
-        videoContainer.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
-    });
-});
-   // Select the custom cursor element
-   const customCursor = document.getElementById('customCursor');
-
-   // Variables to store the mouse coordinates
-   let mouseX = 0;
-   let mouseY = 0;
-
-   // Variables to store the cursor's position
-   let cursorX = 0;
-   let cursorY = 0;
-
-   // Speed of the cursor following the mouse
-   const speed = .8; // Adjust the speed (0.1 for slow, 1 for instant)
-
-   // Function to update the cursor position smoothly
-   const animateCursor = () => {
-       // Calculate the distance between the cursor and the mouse position
-       const distX = mouseX - cursorX;
-       const distY = mouseY - cursorY;
-
-       // Update the cursor's position with a fraction of the distance
-       cursorX += distX * speed;
-       cursorY += distY * speed;
-
-       // Apply the new cursor position
-       customCursor.style.left = `${cursorX}px`;
-       customCursor.style.top = `${cursorY}px`;
-
-       // Request the next animation frame
-       requestAnimationFrame(animateCursor);
-   };
-
-   // Start the cursor animation
-   animateCursor();
-
-   // Function to update mouse coordinates
-   const updateMouseCoordinates = (event) => {
-       mouseX = event.clientX;
-       mouseY = event.clientY;
-       customCursor.style.display = 'block'; // Show the cursor
-   };
-
-   // Function to hide cursor when the mouse leaves the window
-   const hideCursor = () => {
-       customCursor.style.display = 'none'; // Hide the cursor
-   };
-
-   // Event listeners for mouse movement and leaving the window
-   document.addEventListener('mousemove', updateMouseCoordinates);
-   document.addEventListener('mouseleave', hideCursor);
